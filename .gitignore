@@ -1,0 +1,15 @@
+# Virtual Environment
+myenv/
+venv/
+.venv/
+
+# Environment variables & API keys
+.env
+
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Local Vector Databases & Data (if large or private)
+chroma_db/
+faiss_index/
