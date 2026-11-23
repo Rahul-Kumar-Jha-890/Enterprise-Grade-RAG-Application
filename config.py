@@ -1,3 +1,5 @@
+#The purpose of the config file is to centralize all the configurable settings of your RAG application in one 
+# place, instead of hardcoding them throughout the codebase.
 import os
 from pathlib import Path
 from dotenv import load_dotenv
@@ -15,6 +17,10 @@ def get_int(name:str, default : int):
         return default
 
 PROJECT_ROOT = Path(__file__).parent
+DOCUMENTS_DIR = PROJECT_ROOT/ "data" / "documents"
+EMBEDDING_DIR = PROJECT_ROOT / "data" / "embedding"
+VECTORSTORE_DIR = PROJECT_ROOT / "data" / "vectorstore"
+FIASS_DIR = VECTORSTORE_DIR / "fiass"
 
 #OPEN_AI MODELS
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY", "") 
