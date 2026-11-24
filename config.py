@@ -21,6 +21,7 @@ DOCUMENTS_DIR = PROJECT_ROOT/ "data" / "documents"
 EMBEDDING_DIR = PROJECT_ROOT / "data" / "embedding"
 VECTORSTORE_DIR = PROJECT_ROOT / "data" / "vectorstore"
 FIASS_DIR = VECTORSTORE_DIR / "fiass"
+DOC_STORE_PATH = VECTORSTORE_DIR/"doc_store.json"
 
 #OPEN_AI MODELS
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY", "") 

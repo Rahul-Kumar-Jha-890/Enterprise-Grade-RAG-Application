@@ -1,7 +1,7 @@
 from functools import lru_cache
 from langchain_openai import ChatOpenAI, OpenAIEmbeddings
 import config
-
+    
 #chat model does 2 jobs. writing alternate versions of user's qs and output final answer form retrieved chunks.
 @lru_cache(maxsize=1)  #Prevents unnecessary repeated client initialization.
 def get_chat_model() -> ChatOpenAI:  #LangChain class used to interact with OpenAI chat models.

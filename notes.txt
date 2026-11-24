@@ -1,0 +1,31 @@
+An LRU (Least Recently Used) cache in Python is a memory optimization technique that stores the results of 
+function calls so they do not have to be recomputed when called again with the same arguments.
+When the cache reaches its maximum size, it automatically discards the least recently used item to make room for new data.
+
+Usecase of load_document() from ingestion.py
+
+1. Accepts a file path.
+2. Identifies the file extension.
+3. Checks whether the format is supported.
+4. Selects the appropriate LangChain loader.
+5. Loads the document.
+6. Cleans its text.
+7. Removes empty documents.
+8. Adds metadata.
+9. Returns cleaned documents.
+
+INGESTION PIPLEIN:-
+PDF / DOCX / TXT
+Document loaders
+Text extraction
+Text cleaning
+Metadata addition
+Clean LangChain Documents
+Ready for the next stage: chunking and embedding.
+
+Document loading extracts the text; cleaning makes that extracted text usable for chunking and embedding.
+
+Working of chunking.py
+Outer loop: Selects one document at a time.
+Inner loop: Splits that selected document into multiple parent chunks.
+Next inner loop: Splits each parent chunk into smaller child chunks.
