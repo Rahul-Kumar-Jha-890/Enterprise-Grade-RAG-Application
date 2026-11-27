@@ -29,3 +29,10 @@ Working of chunking.py
 Outer loop: Selects one document at a time.
 Inner loop: Splits that selected document into multiple parent chunks.
 Next inner loop: Splits each parent chunk into smaller child chunks.
+
+Working of scripts/build_index.py:
+Purpose: Adds the project's root directory to Python's module search path.
+- __file__ → Current Python file's location.
+- .parent → Its immediate parent directory.
+- .parent.parent → Goes two levels up.
+- sys.path.insert(0, ...) → Adds that location at the beginning of Python's search path.
